@@ -6,7 +6,11 @@
     },
     {
       "source": "/",
-      "destination": "/historia/"
+      "destination": "/istoria/"
+    },
+    {
+      "source": "",
+      "destination": "/istoria/"
     }
   ]
 }
