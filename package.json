@@ -1,10 +1,22 @@
 {
-  "name": "template",
+  "name": "istoria",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --config vite.istoria.config.js",
     "build": "vite build --config vite.istoria.config.js",
-    "serve": "vite preview --config vite.istoria.config.js"
+    "serve": "vite preview --config vite.istoria.config.js",
+    "build:lib": "vite build"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/my-lib.umd.js",
+  "module": "./dist/my-lib.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/my-lib.es.js",
+      "require": "./dist/my-lib.umd.js"
+    }
   },
   "dependencies": {
     "immer": "^9.0.12",
