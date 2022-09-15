@@ -1,7 +1,6 @@
 import queryString from 'query-string';
 
-export const findActiveStory = (stories) => {
-  const { storyId, variantId } = queryString.parse(window.location.search);
+export const findActiveStory = (stories, storyId, variantId) => {
   let activeStory;
 
   if (storyId && variantId) {

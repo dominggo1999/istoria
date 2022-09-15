@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { NavigationWrapper } from './Navigation.style';
 import 'twin.macro';
 import useFrameUrl from './hooks/useFrameUrl';
+import { messageSandbox } from './util/messageSandBox';
 
 const ViewSingle = () => {
   const frameUrl = useFrameUrl();
@@ -29,6 +30,7 @@ const NavItem = ({ list, storyId }) => {
           return (
             <li key={variant.variantId}>
               <Link
+                onClick={() => messageSandbox({ storyId, variantId: variant.variantId })}
                 to={`/?storyId=${storyId}&variantId=${variant.variantId}`}
               >
                 {variant.name}
