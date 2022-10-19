@@ -9,7 +9,7 @@ export default defineConfig({
       entry: path.resolve('./lib/index.jsx'),
       name: 'Istoria',
       formats: ['es', 'umd'],
-      fileName: (format) => `my-lib.${format}.js`,
+      fileName: (format) => `istoria.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'styled-components'],
