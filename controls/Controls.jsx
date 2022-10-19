@@ -10,7 +10,7 @@ const Controls = ({ stories }) => {
   const navigationList = createNavigation(stories);
 
   return (
-    <BrowserRouter basename="/istoria">
+    <BrowserRouter basename="/istoria/">
       <Routes>
         <Route
           path="/"
