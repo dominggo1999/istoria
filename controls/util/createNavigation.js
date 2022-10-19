@@ -7,6 +7,10 @@ export const createNavigation = (stories) => {
       variants: [],
     };
     const { meta, ...rest } = stories[key];
+    if (!meta) {
+      return;
+    }
+
     navigationItem.storyId = meta.title.toLowerCase();
     navigationItem.name = meta.title;
 

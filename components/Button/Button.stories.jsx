@@ -1,27 +1,24 @@
 import Button from './Button';
+import 'twin.macro';
 
-const Template = (args) => <Button {...args} />;
-
-// 👇 Each story then reuses that template
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  text: 'geawgewge',
+export const List = () => {
+  return (
+    <div tw="flex gap-x-3">
+      <Button>Default Button</Button>
+      <Button variant="danger">Danger Button</Button>
+      <Button variant="green">Green Button</Button>
+      <Button variant="purple">Purple Button</Button>
+      <Button variant="yellow">Yellow Button</Button>
+    </div>
+  );
 };
 
-export const Secondary = Template.bind({});
-Secondary.args = {
-  primary: false,
-  text: 'Super',
-};
-
-export const Disabled = Template.bind({});
-Disabled.args = {
-  primary: false,
-  text: 'This button is disabled',
+export const Default = () => <Button>Default</Button>;
+export const Danger = (args) => <Button {...args}>Danger</Button>;
+Danger.args = {
+  variant: 'danger',
 };
 
 export const meta = {
   title: 'Button',
-  component: Button,
 };

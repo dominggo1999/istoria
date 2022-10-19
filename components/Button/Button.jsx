@@ -1,19 +1,10 @@
 import React from 'react';
-import tw, { styled } from 'twin.macro';
+import { StyledButton } from './Button.style';
 
-export const StyledButton = styled.button`
-  ${tw`
-    px-2 
-    py-1 
-    rounded-sm 
-    bg-red-500
-  `}
-`;
-
-const Button = ({ text }) => {
+const Button = ({ children, ...rest }) => {
   return (
-    <StyledButton>
-      {text}
+    <StyledButton {...rest}>
+      {children}
     </StyledButton>
   );
 };
