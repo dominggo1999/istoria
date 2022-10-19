@@ -44,5 +44,9 @@
     "twin.macro": "^2.2.19",
     "vite": "^3.1.8",
     "vite-plugin-babel-macros": "^1.0.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dominggo1999/istoria"
   }
 }
